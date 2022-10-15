@@ -13,7 +13,7 @@ pipeline {
                 sh 'sudo apt install awscli -y '
             }
         }                
-         stage('Build stage') {
+        stage('Build stage') {
             steps {
                 sh 'sudo apt-get update -y'
                 sh 'sudo apt-get install maven -y'
@@ -22,7 +22,7 @@ pipeline {
                 sh 'sudo mv  /var/lib/jenkins/workspace/${JOB_NAME}/target/studentapp-2.2-SNAPSHOT.war /artifact/student-${BUILD_ID}.war'
             }
         }
- /*       stage('artifact push to s3 bucket') {
+ /*     stage('artifact push to s3 bucket') {
             steps {
                 sh 'sudo aws s3 ls'
                 sh 'sudo apt install awscli -y ' 
