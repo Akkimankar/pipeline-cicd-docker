@@ -16,7 +16,7 @@ pipeline {
 
         stage('Build stage') {
             steps {
-                sh 'sudo apt-get update -y '
+                sh 'sudo apt-get update -y'
                 sh 'sudo apt-get install maven -y'
                 sh 'mvn clean package'
                 sh 'sudo mkdir -p /artifact > /dev/null && sudo chown jenkins: /artifact'
