@@ -51,7 +51,7 @@ EXPOSE 8080
             }
         }
  /*       stage('docker image push to ECR') {
-            steps {
+                   steps {
                 sh 'sudo chmod 666 /var/run/docker.sock'
                 sh 'sudo usermod -aG docker ${USER}'
                 sh 'aws ecr get-login-password --region us-west-1 | docker login --username AWS --password-stdin 592149901536.dkr.ecr.us-west-1.amazonaws.com/demo'
