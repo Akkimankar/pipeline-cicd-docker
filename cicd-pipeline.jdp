@@ -13,7 +13,7 @@ pipeline {
                 sh 'sudo apt install awscli -y '
             }
         }
-        
+
         stage('Build stage') {
             steps {
                 sh 'sudo apt-get update -y '
@@ -27,7 +27,7 @@ pipeline {
             steps {
                 sh 'sudo aws s3 ls'
                 sh 'sudo apt install awscli -y ' 
-                sh 'aws s3 cp /artifact/student-${BUILD_ID}.war s3://test-artifact-pritam'
+                sh 'aws s3 cp /artifact/student-${BUILD_ID}.war s3://mahindra-project'
             }
         }
   */      
