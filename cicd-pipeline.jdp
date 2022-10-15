@@ -12,7 +12,7 @@ pipeline {
                 sh 'sudo apt-get update -y '
                 sh 'sudo apt install awscli -y '
             }
-        }
+        }                
 
         stage('Build stage') {
             steps {
