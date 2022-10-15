@@ -13,3 +13,4 @@ pipeline {
                 sh 'sudo apt install awscli -y '
             }
         }
+    
