@@ -4,7 +4,8 @@ pipeline {
     stages {
         stage('git pull') {
             steps {
-                git 'https://github.com/Pritam-Khergade/student-ui.git'           }
+                git 'https://github.com/Pritam-Khergade/student-ui.git'
+            }
         }
         stage('awscli install') {
             steps {
@@ -49,7 +50,8 @@ EXPOSE 8080
             }
         }
  /*       stage('docker image push to ECR') {
-            steps {                                                             'sudo chmod 666 /var/run/docker.sock'
+            steps {
+                sh 'sudo chmod 666 /var/run/docker.sock'
                 sh 'sudo usermod -aG docker ${USER}'
                 sh 'aws ecr get-login-password --region us-east-2 | docker login --username AWS --password-stdin 813483111803.dkr.ecr.us-east-2.amazonaws.com'
                 sh 'docker build -t mydocker-repo-ecr .'
